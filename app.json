@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "SocialApp",
+    "slug": "social-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1020"
+      }
+    }
+  }
+}
