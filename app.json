@@ -4,37 +4,17 @@
     "slug": "freshcart",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#2F9E44"
-    },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.freshcart.app",
-      "buildNumber": "1"
+      "bundleIdentifier": "com.freshcart.app"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#2F9E44"
       },
-      "package": "com.freshcart.app",
-      "versionCode": 1
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-location",
-        {
-          "locationAlwaysAndWhenInUsePermission": "Allow FreshCart to access your location."
-        }
-      ]
-    ]
+      "package": "com.freshcart.app"
+    }
   }
 }

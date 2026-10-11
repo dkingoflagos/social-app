@@ -1,64 +1,140 @@
-export const colors = {
-  background: '#070F1C',
-  text: '#F3F7FF',
-  muted: '#8EA0BF',
-  primary: '#4F8DF7',
-  white: '#FFFFFF',
-};
+# FreshCart - Grocery Delivery App
 
-export const stories = [
-  { id: 1, name: 'You', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80' },
-  { id: 2, name: 'Mia', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80' },
-  { id: 3, name: 'Zoe', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80' },
-  { id: 4, name: 'Tayo', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80' },
-  { id: 5, name: 'Ava', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80' },
-];
+A modern, cross-platform grocery delivery mobile app built with React Native and Expo.
 
-export const trendingTopics = ['#startup', '#design', '#creator', '#lagos', '#music'];
+## Features
 
-export const posts = [
-  {
-    id: 1,
-    user: {
-      name: 'Mia Johnson',
-      handle: 'mia.design',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
-    },
-    time: '12m ago',
-    text: 'Designing better communities one thoughtful feature at a time. What is the one thing your favorite app gets right?',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
-    likes: 2.4 + 'k',
-    comments: 192,
-    shares: 37,
-  },
-  {
-    id: 2,
-    user: {
-      name: 'Tayo Bello',
-      handle: 'tayo.labs',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-    },
-    time: '1h ago',
-    text: 'Our community meetup was packed. The energy in the room felt like a startup conference and a family reunion at the same time.',
-    image: null,
-    likes: 874,
-    comments: 98,
-    shares: 12,
-  },
-  {
-    id: 3,
-    user: {
-      name: 'Sarah Chen',
-      handle: 'sarah.works',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
-    },
-    time: '3h ago',
-    text: 'Sunset walk. Good ideas. Great people. An underrated combo for creative momentum.',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80',
-    likes: 1.9 + 'k',
-    comments: 221,
-    shares: 44,
-  },
-];
+✅ **Home Screen**
+- Product browsing with categories
+- Personalized greeting
+- Promo cards and deals
+- Location-based delivery
 
-export const appName = 'SocialApp';
+✅ **Shopping Cart**
+- Add/remove items
+- Quantity management
+- Order summary with pricing
+- Free delivery threshold
+
+✅ **Deals & Offers**
+- Hot deals showcase
+- Special discounts
+- Limited-time offers
+
+✅ **User Profile**
+- Account management
+- Delivery preferences
+- Order history
+- Settings
+
+## Quick Start
+
+### Prerequisites
+- Node.js 16+
+- npm or yarn
+- Expo CLI: `npm install -g eas-cli`
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/dkingoflagos/freshcart.git
+cd freshcart
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the dev server:
+```bash
+npm start
+```
+
+4. Run on device:
+```bash
+npm run android    # For Android
+npm run ios        # For iOS
+npm run web        # For Web
+```
+
+## Build & Deploy
+
+### Build for iOS
+```bash
+npm run build:ios
+```
+
+### Build for Android
+```bash
+npm run build:android
+```
+
+### Build for Both
+```bash
+npm run build:all
+```
+
+### Submit to App Stores
+```bash
+npm run submit:ios
+npm run submit:android
+```
+
+## Project Structure
+
+```
+freshcart/
+├── App.js                 # Main app component
+├── app.json              # Expo config
+├── package.json          # Dependencies
+├── eas.json              # EAS Build config
+├── src/
+│   ├── components/
+│   │   └── ProductCard.js
+│   ├── screens/
+│   │   ├── HomeScreen.js
+│   │   ├── CartScreen.js
+│   │   └── ProfileScreen.js
+│   ├── data/
+│   │   └── mockData.js
+│   ├── theme/
+│   │   ├── colors.js
+│   │   └── themes.js
+│   └── context/
+│       └── ThemeContext.js
+└── assets/
+    ├── icon.png
+    ├── splash.png
+    └── adaptive-icon.png
+```
+
+## Technologies
+
+- **React Native** - Cross-platform mobile framework
+- **Expo** - Development and distribution platform
+- **Zustand** - State management (optional)
+- **React Navigation** - Navigation library
+
+## Colors & Theming
+
+The app uses a modern, accessible color palette:
+- Primary: `#2F9E44` (Green)
+- Accent: `#F7C948` (Gold)
+- Background: `#F5F9F4` (Light)
+- Text: `#1D2A21` (Dark)
+
+## Next Steps
+
+- [ ] Backend API integration
+- [ ] Real authentication
+- [ ] Payment gateway (Stripe, Paystack)
+- [ ] Order tracking
+- [ ] Real-time notifications
+- [ ] Dark theme support
+- [ ] Multiple language support
+
+## License
+
+MIT

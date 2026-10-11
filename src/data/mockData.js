@@ -1,100 +1,72 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { colors } from '../theme/colors';
+export const categories = [
+  { id: 'fruits', name: 'Fruits', icon: '🍏' },
+  { id: 'vegetables', name: 'Veggies', icon: '🥬' },
+  { id: 'dairy', name: 'Dairy', icon: '🥛' },
+  { id: 'bakery', name: 'Bakery', icon: '🥖' },
+  { id: 'snacks', name: 'Snacks', icon: '🍪' },
+];
 
-export function PostCard({ post }) {
-  return (
-    <View style={styles.card}>
-      <View style={styles.userRow}>
-        <Image source={{ uri: post.user.avatar }} style={styles.avatar} />
-        <View style={styles.userMeta}>
-          <Text style={styles.userName}>{post.user.name}</Text>
-          <Text style={styles.userHandle}>@{post.user.handle} • {post.time}</Text>
-        </View>
-        <Ionicons name="ellipsis-horizontal" size={20} color={colors.muted} />
-      </View>
+export const offers = [
+  { id: 'milk', badge: 'New', title: 'Fresh milk', subtitle: 'Save 20% today', color: '#E7F8EA' },
+  { id: 'veg', badge: 'Fresh', title: 'Organic veg', subtitle: 'Farm-picked deals', color: '#FDF4D4' },
+  { id: 'snack', badge: 'Hot', title: 'Healthy snacks', subtitle: 'Bundle and save', color: '#E9F3FF' },
+];
 
-      <Text style={styles.postText}>{post.text}</Text>
+export const products = [
+  {
+    id: 'banana',
+    name: 'Bananas',
+    unit: '1 bunch',
+    price: 3.99,
+    oldPrice: 5.49,
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'avocado',
+    name: 'Avocados',
+    unit: '2 pcs',
+    price: 5.25,
+    oldPrice: 7.2,
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1519162808019-d98e4f4d0d5d?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'milk',
+    name: 'Fresh Milk',
+    unit: '1 litre',
+    price: 4.5,
+    oldPrice: 6.99,
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'carrot',
+    name: 'Carrots',
+    unit: '500g',
+    price: 2.8,
+    oldPrice: 4.0,
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'mango',
+    name: 'Mangoes',
+    unit: '2 pcs',
+    price: 5.8,
+    oldPrice: 7.4,
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'spinach',
+    name: 'Spinach',
+    unit: '300g',
+    price: 3.4,
+    oldPrice: 4.8,
+    rating: 4.6,
+    image: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=800&q=80',
+  },
+];
 
-      {post.image ? (
-        <Image source={{ uri: post.image }} style={styles.postImage} />
-      ) : null}
-
-      <View style={styles.actionRow}>
-        <View style={styles.actionItem}>
-          <Ionicons name="heart-outline" size={18} color={colors.muted} />
-          <Text style={styles.actionText}>{post.likes}</Text>
-        </View>
-        <View style={styles.actionItem}>
-          <Ionicons name="chatbubble-outline" size={18} color={colors.muted} />
-          <Text style={styles.actionText}>{post.comments}</Text>
-        </View>
-        <View style={styles.actionItem}>
-          <Ionicons name="repeat-outline" size={18} color={colors.muted} />
-          <Text style={styles.actionText}>{post.shares}</Text>
-        </View>
-      </View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: '#0F172A',
-    borderRadius: 20,
-    padding: 14,
-    marginBottom: 14,
-    borderWidth: 1,
-    borderColor: '#1E2A3D',
-  },
-  userRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  avatar: {
-    width: 42,
-    height: 42,
-    borderRadius: 21,
-  },
-  userMeta: {
-    flex: 1,
-    marginLeft: 10,
-  },
-  userName: {
-    color: colors.text,
-    fontWeight: '700',
-    fontSize: 15,
-  },
-  userHandle: {
-    color: colors.muted,
-    fontSize: 12,
-    marginTop: 2,
-  },
-  postText: {
-    color: colors.text,
-    fontSize: 15,
-    lineHeight: 22,
-    marginTop: 14,
-    marginBottom: 12,
-  },
-  postImage: {
-    height: 220,
-    borderRadius: 16,
-    marginBottom: 12,
-  },
-  actionRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: 8,
-  },
-  actionItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  actionText: {
-    color: colors.muted,
-    fontSize: 13,
-  },
-});
+export const appName = 'FreshCart';
